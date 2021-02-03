@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Índice de Massa Corporal</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script>
+		
+		var nome = prompt('Qual é o seu nome ?')
+		var altura = prompt('Qual é a sua altura em centímetros ?')
+		var peso = prompt('Qual é o seu o peso ?')
+
+		 altura =parseFloat(altura / 100)
+		 peso = parseFloat(peso)
+		
+		var M = peso / (altura * altura)
+
+		document.write('<p>Seu nome é: <strong>' + nome +'</strong></p>')
+		document.write('<p>Sua altura é: <strong>' + altura + '</strong></br> </p>')
+		document.write('<p>Seu peso é: <strong> '+ peso + ' KG </strong></br> </p>')
+		document.write('<p>' + nome +' seu índice de massa corporal é: <strong>' + M + ' <strong> </p>')
+
+		if(M < 16) {
+			document.write('<p >sendo classificada como: <strong> Baixo peso muito grave </strong> </p>')
+		}else if(M >= 16 && M <= 16.99) {
+			document.write('Baixo peso grave')
+		}else if(M >= 17 && M <= 18.49) {
+			document.write('Baixo peso')
+		}else if(M >= 18.50 && M <= 24.99) {
+			document.write('Peso normal, parabéns!!')
+		}else if(M >= 25 && M <= 29.99){
+			document.write('Sobre peso')
+		}else if(M >= 30 && M <= 34,99) {
+			document.write('Obesidade grau I')
+		}else if(M >= 35 && M <= 39,99) {
+			document.write('Obesidade grau II')
+		}else if (M > 40) {
+			document.write('Obesidade grau III')
+		}
+
+
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>
