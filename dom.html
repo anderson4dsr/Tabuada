@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>DOM</title>
+	
+</head>
+<body>
+	<input type="text"
+	placeholder="Digite seu nome" 
+	id="nome_usuario" 
+	class="campo_texto" 
+	name="nome">
+
+
+	<script>
+		//pelo (id)
+		document.write('</br>'+document.getElementById('nome_usuario')+ '</br>')
+
+		//pelo nome da tag
+		document.write(document.getElementsByTagName('input') + '</br>')
+
+		//pelo atributo class
+		document.write(document.getElementsByClassName('campo_texto') + '</br>')
+
+		//pelo atributo name
+		document.write(document.getElementsByName('nome'))
+
+
+
+
+
+	</script>
+
+</body>
+</html>

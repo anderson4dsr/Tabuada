@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Atividade DOM</title>
+	<script>
+		function modificaCor(mudaCor) {
+			document.getElementById('nome').style.background = 'yellow'
+		}
+		function modificando(changeColor){
+			var caracter =document.getElementById('nome').value
+
+			//lenght tem como responsabilidade retornar quantidade decaracteres da string
+			if (caracter.length < 3) {
+				document.getElementById('nome').style.background = "red"
+			} else {
+				document.getElementById('nome').style.background = "green"
+			}
+		}
+		
+	</script>
+</head>
+<body>
+
+	<input 
+	type="text"
+	placeholder="Digite aqui"
+	onfocus="modificaCor()"
+	onblur="modificando()" 
+	id="nome">
+	<!--ONFOCUS: é acionando quando clica dentro do input-->
+
+</body>
+</html>

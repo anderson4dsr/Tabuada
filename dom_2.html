@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8">
+	<title>DOM</title>
+	<script>
+		//Essa função esta agindo dentro do INPUT distribuindo para os outros INPUTS seus respectivos caracteres
+		function distribuiCaractere() {
+			//o atributo VALUE recupera o valor digitado dentro do INPUT-> selecionar o valor digitado
+			var caracter = DOCTYPEument.getElementById('entrada').value
+			document.getElementById('entrada').value = ''
+
+			//limpar espaços em branco nas extremidades da string com o método (trim)
+			caracter.trim()	
+
+
+			switch(caracter){
+				case'0':
+				case'1':
+				case'2':
+				case'3':
+				case'4':
+				case'5':
+				case'6':
+				case'7':
+				case'8':
+				case'9':
+					//adicionar o caracter no campo referente a números.
+					document.getElementById('apenas_numeros').value += caracter
+					break;
+					default:
+					//addcionar o caracter no campo referente a letras
+					document.getElementById('apenas_letras').value += caracter
+
+
+			}
+		}
+	</script>
+</head>
+<body>
+	<!--método ONKEYUP: é acionado somente após a realização do evento-->
+	<input 
+	type="text" 
+	placeholder="digite uma caractere aqui" onkeyup="distribuiCaractere()"
+	id="entrada">
+
+	<hr />
+	<span>Letras</span>
+	<input type="text"
+	 disabled="disabled"
+	 id="apenas_letras" />
+	<!-- TAG (SPAN): colocar o nome do formulário-->
+	<span>Números</span>
+	<!-- atributo DISABLED: desabilita o campo,para que o usuário não escreva nada nele-->
+	<input type="text"
+	 disabled="disadled" 
+	 id="apenas_numeros" />
+
+	<hr />
+
+</body>
+</html>
